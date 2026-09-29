@@ -1,0 +1,2 @@
+/* Page: careers */
+R['careers']=()=>`<section class="sec">${hd('Join us','Careers','Open roles — placeholders.')}${C.jobs.map(([t,l,ty])=>`<div class="li rv"><b>${ty}</b><div><h3>${t}</h3><p>${l}</p></div><a class="bt" href="mailto:${C.email}?subject=Application: ${t}">Apply</a></div>`).join('')}<p class="rv" style="margin-top:30px">Send your CV and portfolio to ${C.email}. [Placeholder application process.]</p></section>`;

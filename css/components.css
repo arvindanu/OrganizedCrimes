@@ -1,0 +1,12 @@
+/* components */
+.bt{display:inline-flex;align-items:center;min-height:48px;padding:0 28px;border:1px solid var(--fg);background:none;color:var(--fg);text-decoration:none;font:500 12px var(--b);letter-spacing:.25em;text-transform:uppercase;cursor:pointer;transition:.4s}.bt:hover{background:var(--fg);color:var(--bg)}.bt.gh{border-color:var(--ln)}
+.g{display:grid;gap:28px;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr))}
+.th{position:relative;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--ln)}.th>*{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.ph{display:grid;place-items:center;background:repeating-linear-gradient(135deg,#0b0b0b 0 14px,#111 14px 28px);color:var(--mut);font:500 10px var(--b);letter-spacing:.3em;text-transform:uppercase;text-align:center;padding:12px}
+.vid{aspect-ratio:16/9;border:1px solid var(--ln);position:relative;overflow:hidden}.vid i{position:absolute;left:50%;top:42%;width:64px;height:64px;margin:-32px;border:1px solid var(--fg);border-radius:50%}.vid i:after{content:"";position:absolute;left:25px;top:20px;border:11px solid transparent;border-left:17px solid var(--fg)}
+.card{display:block;text-decoration:none}.card:hover .th>*{transform:scale(1.06)}.card em{position:absolute;right:12px;bottom:12px;font:500 10px var(--b);letter-spacing:.25em;text-transform:uppercase;background:#000;padding:6px 10px;opacity:0;transition:.4s;font-style:normal}.card:hover em{opacity:1}
+.ci{padding:20px 0;border-bottom:1px solid var(--ln)}.ci small{color:var(--mut);font-size:12px;letter-spacing:.12em}.ci h3{margin:6px 0 8px}.ci p{font-size:14px}.row{display:flex;justify-content:space-between;gap:10px;margin-top:14px;font:500 11px var(--b);letter-spacing:.2em;text-transform:uppercase}.row span{color:var(--mut)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,90px)}.blk{border-top:1px solid var(--ln);padding:24px 0 34px}.blk h3{margin-bottom:12px}
+form{display:grid;gap:18px;max-width:560px}label{display:grid;gap:6px;font:500 11px var(--b);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+input,textarea{background:none;border:0;border-bottom:1px solid #444;color:var(--fg);font:300 16px var(--b);padding:10px 0;border-radius:0}input:focus,textarea:focus{outline:0;border-color:#fff}.nt{font-size:12px;color:var(--mut)}
+.pv{position:absolute;inset:0;opacity:0;transition:opacity .5s}

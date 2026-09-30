@@ -1,4 +1,0 @@
-/* Page: home */
-R['']=()=>`<section class="hero"><div><p class="ey">Independent game studio</p><h1 class="ttl"><span class="ln"><span>ORGANIZED</span></span><span class="ln"><span>CRIMES</span></span></h1><p class="sf">${C.tag}</p><p class="ip">${C.intro}</p><div class="cta"><a class="bt" href="#/games">Our games</a><a class="bt gh" href="#/about">The studio</a></div></div><div id="lgw" role="img" aria-label="Organized Crimes emblem. Hover or tap to disintegrate."><canvas id="lg"></canvas><p class="hint"><span class="hv">Hover the emblem</span><span class="tp">Tap the emblem</span></p></div></section>
- <section class="sec"><h2 class="rv">Selected work</h2><br><br><div class="g">${C.games.slice(0,3).map(card).join('')}</div><br><a class="bt rv" href="#/games">All games</a></section>
- <section class="sec"><p class="sf rv" style="max-width:26ch;font-size:clamp(1.8rem,5vw,3.6rem)">We plan every detail. Then we make it look effortless.</p></section>`;

@@ -16,7 +16,12 @@ const C={
     'From early concepts and prototypes to developing complete playable projects, TERMORGAN continues to explore different genres, mechanics, and creative ideas. Each project is an opportunity to learn, experiment, and improve, with the long-term goal of expanding Organized Crimes into a larger independent game studio.'],
   vision:'“Create games with an identity of their own — simple in concept, bold in atmosphere, and memorable to experience.”'},
  games:GAMES,
- team:[['TERMORGAN','Lead Game Designer'],['TERMORGAN','Art Director'],['TERMORGAN','Lead Programmer'],['TERMORGAN','Sound & Music']].map(([n,r],i)=>({n,r,img:media('tp'+(i+1),'team',0,'assets/images/team/'),bio:'Short bio placeholder.'})),
+ team:[
+  ['TERMORGAN','Lead Game Designer','Crafting gameplay, mechanics, and experiences.'],
+  ['TERMORGAN','Art Director','Shaping the visual style, atmosphere, and creative identity.'],
+  ['TERMORGAN','Lead Programmer','Building core systems, mechanics, and technical foundations.'],
+  ['TERMORGAN','Sound & Music','Creating soundscapes and music that bring games to life.']
+ ].map(([n,r,bio],i)=>({n,r,bio,img:media('tp'+(i+1),'team',0,'assets/images/team/')})),
  news:[
   ['2026-09-29','Don’t Look Back — Beta Development','Don’t Look Back is currently in beta development. The game is being refined with a focus on atmosphere, gameplay, and the core survival experience.'],
   ['2026-09-15','Flipside — Development Update','Flipside is a fast-paced 2D arcade runner featuring flip-based movement, obstacles, coins, boosts, unlockable content, and progressive difficulty.'],

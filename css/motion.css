@@ -1,0 +1,5 @@
+/* motion */
+#cur{position:fixed;inset:0;background:#000;z-index:60;transform:translateY(100%);transition:transform .45s cubic-bezier(.7,0,.2,1);pointer-events:none}#cur.on{transform:none}
+#ld{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-content:center;justify-items:center;gap:18px;transition:opacity .8s,visibility .8s}#ld.off{opacity:0;visibility:hidden}
+#ld img{width:120px;height:120px;animation:pl 1.4s ease-in-out infinite}#ld span{font:500 10px var(--b);letter-spacing:.5em;color:var(--mut)}@keyframes pl{50%{opacity:.3;transform:scale(.96)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}

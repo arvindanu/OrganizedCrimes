@@ -1,0 +1,23 @@
+/* Subtle depth, used sparingly.
+   1) Image cards (games, team): ONLY the image container (.th) zooms forward a hair (scale 1.02 — it grows into the 28px grid gap, never over a
+      neighbour). The card itself, the title, description and every other text element stay completely still. A faint gold light-trail and
+      corner glow live INSIDE the image container's border and nowhere else.
+   2) Hero emblem + founder portrait: js/effects/tilt3d.js leans them a few degrees toward the mouse (desktop only). */
+@property --tr{syntax:'<angle>';inherits:false;initial-value:0deg}
+.card .th,.team-card .th{transition:border-color .6s,box-shadow .6s,scale .7s cubic-bezier(.2,.7,.2,1)}
+.card .th:before,.team-card .th:before,.card .th:after,.team-card .th:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity .7s ease}
+.card .th:before,.team-card .th:before{
+  background:radial-gradient(90% 70% at 0 0,rgba(232,196,96,.11),transparent 60%),radial-gradient(90% 70% at 100% 100%,rgba(232,196,96,.09),transparent 60%)}
+.card .th:after,.team-card .th:after{padding:1px;
+  background:conic-gradient(from var(--tr,0deg),transparent 0deg,rgba(240,205,110,.5) 30deg,rgba(255,236,170,.7) 55deg,transparent 115deg,transparent 360deg),linear-gradient(rgba(232,196,96,.2),rgba(232,196,96,.2));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
+  animation:trail 7s linear infinite paused}
+@keyframes trail{to{--tr:360deg}}
+@media(hover:hover){
+  .card:hover .th,.team-card:hover .th{scale:1.02;border-color:rgba(232,196,96,.55);box-shadow:none}   /* no outer glow: nothing spills past the image container */
+  .card:hover .th:before,.team-card:hover .th:before,.card:hover .th:after,.team-card:hover .th:after{opacity:1}
+  .card:hover .th:after,.team-card:hover .th:after{animation-play-state:running}
+  .card:hover .ci,.team-card:hover .ci{border-color:var(--ln)}   /* text area stays plain: the gold belongs to the image border only */
+}
+#lg.tilt-on,.pt.tilt-on{transition:transform .25s ease-out}
+@media(prefers-reduced-motion:reduce){.card .th:after,.team-card .th:after{display:none}}

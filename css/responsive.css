@@ -1,0 +1,2 @@
+/* responsive */
+@media(max-width:800px){.two{grid-template-columns:1fr}.li{grid-template-columns:1fr;gap:6px}.gr{animation:none}}
